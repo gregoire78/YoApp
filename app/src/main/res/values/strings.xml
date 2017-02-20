@@ -5,4 +5,6 @@
     <string name="btn_envoyer">YO</string>
     <string name="title_activity_afficher_message">AfficherMessage</string>
     <string name="anim_android_descript">Animation Android</string>
+    <string name="btn_play">LIRE</string>
+    <string name="btn_stop">STOP</string>
 </resources>
