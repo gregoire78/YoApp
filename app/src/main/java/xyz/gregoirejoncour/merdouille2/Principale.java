@@ -1,6 +1,7 @@
 package xyz.gregoirejoncour.merdouille2;
 
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -10,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 public class Principale extends AppCompatActivity {
 
@@ -19,6 +21,14 @@ public class Principale extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principale);
+
+        ImageView img = (ImageView) findViewById(R.id.animAndroid);
+        img.setBackgroundResource(R.drawable.anim_android);
+
+        AnimationDrawable frameAnimation = (AnimationDrawable) img.getBackground();
+
+        frameAnimation.start();
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 

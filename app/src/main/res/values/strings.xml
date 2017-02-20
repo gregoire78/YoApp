@@ -4,4 +4,5 @@
     <string name="str_chp_saisie">Saisir un YO</string>
     <string name="btn_envoyer">YO</string>
     <string name="title_activity_afficher_message">AfficherMessage</string>
+    <string name="anim_android_descript">Animation Android</string>
 </resources>

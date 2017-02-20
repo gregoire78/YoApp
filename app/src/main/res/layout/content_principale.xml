@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -21,16 +21,29 @@
         android:layout_width="wrap_content"
         android:hint="@string/str_chp_saisie"
         android:layout_weight="1"
-        android:inputType="textCapCharacters" />
+        android:inputType="textCapCharacters"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/btn_envoyer"
-        android:onClick="envoiMessage"/>
+        android:onClick="envoiMessage"
+        android:layout_below="@+id/chp_saisie"
+        android:layout_alignParentEnd="true" />
 
 <!--    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!" />-->
-</LinearLayout>
+
+    <ImageView
+        android:layout_width="360px"
+        android:layout_height="360px"
+        android:id="@+id/animAndroid"
+        android:contentDescription="@string/anim_android_descript"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>
