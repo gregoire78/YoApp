@@ -76,9 +76,4 @@ public class Principale extends AppCompatActivity {
         intent.putExtra(MESSAGE, message);
         startActivity(intent);
     }
-
-    /*public void jouer(View view) {
-        Intent intent = new Intent(this, Game.class);
-        startActivity(intent);
-    }*/
 }
