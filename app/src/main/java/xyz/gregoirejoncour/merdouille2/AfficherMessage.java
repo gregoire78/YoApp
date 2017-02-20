@@ -63,6 +63,10 @@ public class AfficherMessage extends AppCompatActivity {
 
         });
 
+        layout.addView(fire, 1);
+        layout.addView(playBtn, 2);
+        layout.addView(stopBtn, 3);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
