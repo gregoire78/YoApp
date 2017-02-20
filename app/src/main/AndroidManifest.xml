@@ -21,7 +21,8 @@
         <activity
             android:name=".AfficherMessage"
             android:label="@string/title_activity_afficher_message"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Game"></activity>
     </application>
 
 </manifest>

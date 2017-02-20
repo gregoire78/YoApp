@@ -35,7 +35,7 @@ public class AfficherMessage extends AppCompatActivity {
 
         TableLayout layout = (TableLayout) findViewById(R.id.layout_afficher_message);
 
-        layout.addView(textView);
+        layout.addView(textView,0);
 
         fire = new ImageView(this);
         fire.setImageResource(R.drawable.anim_android);
