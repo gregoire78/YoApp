@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">YO</string>
+    <string name="action_settings">Settings</string>
+    <string name="str_chp_saisie">Saisir un YO</string>
+    <string name="btn_envoyer">YO</string>
+    <string name="title_activity_afficher_message">AfficherMessage</string>
+</resources>
