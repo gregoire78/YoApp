@@ -88,8 +88,10 @@ public class ViewPerso extends View {
     private Runnable updateTimerThread = new Runnable() {
         @Override
         public void run() {
+            xOri++;
+            yOri++;
             invalidate();
-            timerHandle.postDelayed(this, 10);
+            timerHandle.postDelayed(this, 50);
         }
     };
 }

@@ -7,4 +7,5 @@
     <string name="anim_android_descript">Animation Android</string>
     <string name="btn_play">LIRE</string>
     <string name="btn_stop">STOP</string>
+    <string name="ouvrir_nav">Web</string>
 </resources>

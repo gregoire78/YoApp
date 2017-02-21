@@ -1,7 +1,10 @@
 package xyz.gregoirejoncour.merdouille2;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.graphics.drawable.AnimationDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -11,6 +14,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+
+import java.util.List;
 
 public class Principale extends AppCompatActivity {
 
@@ -31,7 +36,7 @@ public class Principale extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-       FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -62,12 +67,24 @@ public class Principale extends AppCompatActivity {
             return true;
         }
 
+        if (id == R.id.menu_web) {
+            Uri webpage = Uri.parse("http://www.gregoirejoncour.xyz");
+            Intent webIntent = new Intent(Intent.ACTION_VIEW, webpage);
+
+            PackageManager pm = getPackageManager();
+            List<ResolveInfo> activbities = pm.queryIntentActivities(webIntent, 0);
+            boolean isIntentSafe = activbities.size() > 0;
+
+            if (isIntentSafe) {
+                startActivity(webIntent);
+            }
+        }
+
         return super.onOptionsItemSelected(item);
     }
 
-    public void envoiMessage(View view){
+    public void envoiMessage(View view) {
         Intent intent = new Intent(this, AfficherMessage.class);
-
 
 
         EditText editText = (EditText) findViewById(R.id.chp_saisie);
