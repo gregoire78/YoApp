@@ -6,6 +6,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.drawable.BitmapDrawable;
+import android.os.Handler;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
@@ -25,6 +26,8 @@ public class ViewPerso extends View {
     private float deltaX = 0, deltaY = 0;
     boolean move = false;
 
+    private Handler timerHandle = new Handler();
+
     public ViewPerso(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
 
@@ -32,6 +35,8 @@ public class ViewPerso extends View {
         logo = d.getBitmap();
         largImage = logo.getWidth();
         hautImage = logo.getHeight();
+
+        this.timerHandle.postDelayed(updateTimerThread, 0);
     }
 
     public void onDraw(Canvas canvas) {
@@ -79,4 +84,12 @@ public class ViewPerso extends View {
         invalidate();
         return true;
     }
+
+    private Runnable updateTimerThread = new Runnable() {
+        @Override
+        public void run() {
+            invalidate();
+            timerHandle.postDelayed(this, 10);
+        }
+    };
 }
