@@ -1,13 +1,23 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="xyz.gregoirejoncour.merdouille2.Principale" >
-    <item android:id="@+id/action_settings"
-        android:title="@string/action_settings"
+    tools:context="xyz.gregoirejoncour.merdouille2.Principale">
+    <item
+        android:id="@+id/action_settings"
         android:orderInCategory="100"
+        android:title="@string/action_settings"
         app:showAsAction="never" />
 
-    <item android:id="@+id/menu_web"
+    <item
+        android:id="@+id/menu_web"
         android:title="@string/ouvrir_nav"
         app:showAsAction="never" />
+
+    <item android:id="@+id/street"
+        android:title="@string/menu_street"
+        app:showAsAction="never" />
+    <item android:id="@+id/map"
+        android:title="@string/menu_map"
+        app:showAsAction="never" />
+
 </menu>

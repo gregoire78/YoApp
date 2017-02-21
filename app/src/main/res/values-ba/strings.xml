@@ -8,10 +8,4 @@
     <string name="btn_play">LIRE</string>
     <string name="btn_stop">STOP</string>
     <string name="ouvrir_nav">Web</string>
-    <string name="title_activity_street">Map</string>
-    <string name="menu_street">Rue data</string>
-    <string name="menu_map">Carte</string>
-    <string name="location_permission_denied">localistion non permise</string>
-    <string name="permission_required_toast">besoin d\'autorisation de geolocalisation</string>
-    <string name="permission_rationale_location">location rational</string>
 </resources>

@@ -80,6 +80,16 @@ public class Principale extends AppCompatActivity {
             }
         }
 
+        if (id == R.id.street) {
+            Intent webIntent = new Intent(Principale.this, StreetyActivity.class);
+            startActivity(webIntent);
+        }
+
+        if (id == R.id.map) {
+            Intent webIntent = new Intent(Principale.this, StreetActivity.class);
+            startActivity(webIntent);
+        }
+
         return super.onOptionsItemSelected(item);
     }
 
